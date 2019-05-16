@@ -1,0 +1,5 @@
+highlight : monokai
+code-line-numbers : true
+transition : slide
+title : "TypeScript 入門"
+theme-override : PITCHME.css

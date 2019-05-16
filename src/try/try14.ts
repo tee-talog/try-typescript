@@ -1,7 +1,7 @@
 {
   // JavaScript と同じ使い方
   const str: string = 'string'
-  if ('string' === typeof str) {
+  if (typeof str === 'string') {
     console.log('str is string') // => 出力される
   }
 

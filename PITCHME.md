@@ -148,14 +148,12 @@ console.log(add(1, 2)) // => 3
 ---
 
 ### 書いてみる
-```ts:try1.ts
+`src/try/try1.ts`
+
+```ts
 const add = (a: number, b: number): number => a + b
 console.log(add(1, 2)) // => 3
 ```
-
----?code=src/try/try1.ts
-
-`src/try` 以下に同じコードが配置してある。
 
 <small>諸事情により、実際のソースではブロックでスコープを切っている。</small>
 
@@ -207,7 +205,9 @@ npm start src/try/try1.ts
 ### 型の書き方
 「型アノテーション」というもので型定義する。
 
-```ts:try2.ts
+`src/try/try2.ts`
+
+```ts
 // 変数に型付けする場合
 // 変数名: 型 = 値
 const str: string = 'Hello World'
@@ -231,7 +231,9 @@ const add = (a: number, b: number): number => a + b
 
 ---
 
-```ts:try3.ts
+`src/try/try3.ts`
+
+```ts
 const add = (a: number, b: number) => a + b
 const one = 1
 const two = 2
@@ -274,7 +276,9 @@ nullable な型（null 許容型）は、後述の Union Types や省略可能�
 
 具体的には、「`1` 型」、「`true` 型」、「`'Hello'` 型」など。
 
-```ts:try4.ts
+`src/try/try4.ts`
+
+```ts
 const one = 1 // => 1 型
 const isTrue = true // => true 型
 const hello = 'world' // => 'world' 型
@@ -292,7 +296,9 @@ const hello = 'world' // => 'world' 型
 
 しかも `null`, `undefined` 含む。
 
-```ts:try5.ts
+`src/try/try5.ts`
+
+```ts
 let something: any = 'any'
 somethig = null
 something = undefined
@@ -307,7 +313,9 @@ any 型を使うときは**要注意**。TypeScript としての**利点をす�
 ---
 
 ### その他の宣言方法
-```ts:try6.ts
+`src/try/try6.ts`
+
+```ts
 // 配列型（どちらでも可）
 const fibonacci: number[] = [0, 1, 1, 2, 3, 5]
 const pi: Array<number> = [1, 4, 1, 5, 9, 2] // ジェネリクスを利用（後述）
@@ -345,7 +353,9 @@ const add: funcType = (a, b) => a + b
 
 ※Java 等のジェネリクスと同じ。
 
-```ts:try7
+`src/try/try7.ts`
+
+```ts
 // number 型の配列
 const pi1: Array<number> = [1, 4, 1, 5, 9, 2]
 // boolean 型の配列
@@ -368,7 +378,9 @@ console.log(genericFunc('test')) // => test …… 必ず文字列が返る
 
 ---
 
-```ts:try8.ts
+`src/try/try8.ts`
+
+```ts
 class Human {
   private _name: string
   constructor(name: string) {
@@ -391,7 +403,9 @@ console.log(tanaka.name) // => 'Tarou Tanaka'
 
 例えば `number | string` は、「number 型または strging 型」となる。
 
-```ts:try9.ts
+`src/try/try9.ts`
+
+```ts
 const toString = (value: number | boolean): string => value.toString()
 console.log(toString(100)) // => '100'
 console.log(toString(true)) // => 'true'
@@ -406,7 +420,9 @@ isNull = null // エラーにならない
 ### 省略可能なプロパティ
 Union Types と似ているが、こちらは定義しなくてもいいプロパティを表すときのみ使用できる。
 
-```ts:try10.ts
+`src/try/try10.ts`
+
+```ts
 type Human = {
   name: string
   organization?: string
@@ -425,7 +441,9 @@ this が不明瞭な場合のみ指定が必要。
 
 基本的に型推論できるため、あまり使わないはず。
 
-```ts:try11.ts
+`src/try/try11.ts`
+
+```ts
 const insertSpace = function (this: string): string {
   return this.split('').join(' ')
 }
@@ -439,7 +457,9 @@ console.log(insertSpace.call('test')) // => 't e s t'
 
 任意の型を any として扱うこともできてしまうので注意が必要。
 
-```ts:try12.ts
+`src/try/try12.ts`
+
+```ts
 const anyVar: any = 'text'
 const nonTyped = anyVar // => any 型
 const typed: string = anyVar as string // => string 型
@@ -467,7 +487,9 @@ npm で公開されているモジュールはすべて JavaScript で書かれ�
 npm i -D @types/express
 ```
 
-```ts:try13.ts
+`src/try/try13.ts`
+
+```ts
 import express from 'express'
 const app = express() // app は Express 型
 
@@ -488,7 +510,9 @@ JavaScript には `typeof` 演算子がある。
 
 型を指定する箇所において使用すると、（JavaScript のように）文字列ではなく型が返ってくる。
 
-```ts:try14.ts
+`src/try/try14.ts`
+
+```ts
 // JavaScript と同じ使い方
 const str: string = 'string'
 if ('string' === typeof str) {

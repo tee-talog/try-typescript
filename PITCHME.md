@@ -153,6 +153,8 @@ const add = (a: number, b: number): number => a + b
 console.log(add(1, 2)) // => 3
 ```
 
+---?code=src/try/try1.ts
+
 `src/try` 以下に同じコードが配置してある。
 
 <small>諸事情により、実際のソースではブロックでスコープを切っている。</small>

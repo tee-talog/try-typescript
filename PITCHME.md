@@ -148,7 +148,7 @@ console.log(add(1, 2)) // => 3
 ---
 
 ### 書いてみる
-`src/try/try1.ts`
+<small>`src/try/try1.ts`</small>
 
 ```ts
 const add = (a: number, b: number): number => a + b
@@ -205,7 +205,7 @@ npm start src/try/try1.ts
 ### 型の書き方
 「型アノテーション」というもので型定義する。
 
-`src/try/try2.ts`
+<small>`src/try/try2.ts`</small>
 
 ```ts
 // 変数に型付けする場合
@@ -231,7 +231,7 @@ const add = (a: number, b: number): number => a + b
 
 ---
 
-`src/try/try3.ts`
+<small>`src/try/try3.ts`</small>
 
 ```ts
 const add = (a: number, b: number) => a + b
@@ -276,7 +276,7 @@ nullable な型（null 許容型）は、後述の Union Types や省略可能�
 
 具体的には、「`1` 型」、「`true` 型」、「`'Hello'` 型」など。
 
-`src/try/try4.ts`
+<small>`src/try/try4.ts`</small>
 
 ```ts
 const one = 1 // => 1 型
@@ -296,7 +296,7 @@ const hello = 'world' // => 'world' 型
 
 しかも `null`, `undefined` 含む。
 
-`src/try/try5.ts`
+<small>`src/try/try5.ts`</small>
 
 ```ts
 let something: any = 'any'
@@ -313,7 +313,7 @@ any 型を使うときは**要注意**。TypeScript としての**利点をす�
 ---
 
 ### その他の宣言方法
-`src/try/try6.ts`
+<small>`src/try/try6.ts`</small>
 
 ```ts
 // 配列型（どちらでも可）
@@ -353,7 +353,7 @@ const add: funcType = (a, b) => a + b
 
 ※Java 等のジェネリクスと同じ。
 
-`src/try/try7.ts`
+<small>`src/try/try7.ts`</small>
 
 ```ts
 // number 型の配列
@@ -378,7 +378,7 @@ console.log(genericFunc('test')) // => test …… 必ず文字列が返る
 
 ---
 
-`src/try/try8.ts`
+<small>`src/try/try8.ts`</small>
 
 ```ts
 class Human {
@@ -403,7 +403,7 @@ console.log(tanaka.name) // => 'Tarou Tanaka'
 
 例えば `number | string` は、「number 型または strging 型」となる。
 
-`src/try/try9.ts`
+<small>`src/try/try9.ts`</small>
 
 ```ts
 const toString = (value: number | boolean): string => value.toString()
@@ -420,7 +420,7 @@ isNull = null // エラーにならない
 ### 省略可能なプロパティ
 Union Types と似ているが、こちらは定義しなくてもいいプロパティを表すときのみ使用できる。
 
-`src/try/try10.ts`
+<small>`src/try/try10.ts`</small>
 
 ```ts
 type Human = {
@@ -441,7 +441,7 @@ this が不明瞭な場合のみ指定が必要。
 
 基本的に型推論できるため、あまり使わないはず。
 
-`src/try/try11.ts`
+<small>`src/try/try11.ts`</small>
 
 ```ts
 const insertSpace = function (this: string): string {
@@ -457,7 +457,7 @@ console.log(insertSpace.call('test')) // => 't e s t'
 
 任意の型を any として扱うこともできてしまうので注意が必要。
 
-`src/try/try12.ts`
+<small>`src/try/try12.ts`</small>
 
 ```ts
 const anyVar: any = 'text'
@@ -487,7 +487,7 @@ npm で公開されているモジュールはすべて JavaScript で書かれ�
 npm i -D @types/express
 ```
 
-`src/try/try13.ts`
+<small>`src/try/try13.ts`</small>
 
 ```ts
 import express from 'express'
@@ -510,7 +510,7 @@ JavaScript には `typeof` 演算子がある。
 
 型を指定する箇所において使用すると、（JavaScript のように）文字列ではなく型が返ってくる。
 
-`src/try/try14.ts`
+<small>`src/try/try14.ts`</small>
 
 ```ts
 // JavaScript と同じ使い方

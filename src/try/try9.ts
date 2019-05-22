@@ -1,7 +1,15 @@
 {
-  const toString = (value: number | boolean): string => value.toString()
-  console.log(toString(100))
-  console.log(toString(true))
+  const point = (value: number | string): number => {
+    if (typeof value === 'number') {
+      // number 型
+      return value
+    }
+    // string 型
+    return value.length
+  }
+
+  console.log(point(100))
+  console.log(point('100'))
 
   // nullable
   let isNull: boolean | null = true

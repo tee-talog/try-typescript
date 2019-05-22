@@ -495,7 +495,7 @@ console.log(length(str)) // => 6
 珍しい型だが、TypeScript ではよく使われる。
 特に nullable 型はこれを使って表現する。
 
-例えば `number | string` は、「number 型または strging 型」となる。
+例えば `number | string` は、「number 型または string 型」となる。
 
 <small>`src/try/try13.ts`</small>
 

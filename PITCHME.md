@@ -497,6 +497,10 @@ console.log(length(str)) // => 6
 
 例えば `number | string` は、「number 型または string 型」となる。
 
+---
+
+そのままでは各型に共通の操作しかできない。`typeof` やプロパティの有無などで絞り込むことで、固有の操作が行えるようになる。
+
 <small>`src/try/try13.ts`</small>
 
 ```ts

@@ -1,17 +1,6 @@
 {
-  const point = (value: number | string): number => {
-    if (typeof value === 'number') {
-      // number 型
-      return value
-    }
-    // string 型
-    return value.length
+  const insertSpace = function (this: string): string {
+    return this.split('').join(' ')
   }
-
-  console.log(point(100))
-  console.log(point('100'))
-
-  // nullable
-  let isNull: boolean | null = true
-  isNull = null // エラーにならない
+  console.log(insertSpace.call('test'))
 }

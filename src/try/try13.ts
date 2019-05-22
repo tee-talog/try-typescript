@@ -1,10 +1,17 @@
-import express from 'express'
-
 {
-  const app = express() // app は Express 型
+  const point = (value: number | string): number => {
+    if (typeof value === 'number') {
+      // number 型
+      return value
+    }
+    // string 型
+    return value.length
+  }
 
-  app.get('/', (req, res) => {
-    res.send('Hello World') // res は Response 型
-  })
-  app.listen(3000)
+  console.log(point(100))
+  console.log(point('100'))
+
+  // nullable
+  let isNull: boolean | null = true
+  isNull = null // エラーにならない
 }

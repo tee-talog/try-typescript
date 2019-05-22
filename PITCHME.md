@@ -396,43 +396,6 @@ console.log(tanaka.name) // => 'Tarou Tanaka'
 
 ---
 
-### Union Types
-「○○型**または**☓☓型」という型。
-珍しい型だが、TypeScript ではよく使われる。
-特に nullable 型はこれを使って表現する。
-
-例えば `number | string` は、「number 型または strging 型」となる。
-
-<small>`src/try/try9.ts`</small>
-
-```ts
-const toString = (value: number | boolean): string => value.toString()
-console.log(toString(100)) // => '100'
-console.log(toString(true)) // => 'true'
-
-// nullable
-let isNull: boolean | null = true
-isNull = null // エラーにならない
-```
-
----
-
-### 省略可能なプロパティ
-Union Types と似ているが、こちらは定義しなくてもいいプロパティを表すときのみ使用できる。
-
-<small>`src/try/try10.ts`</small>
-
-```ts
-type Human = {
-  name: string
-  organization?: string
-}
-const mushoku: Human = { name: '無職の男' } // organization プロパティを定義しなくても OK
-console.log(mushoku.name) // => 無職の男
-```
-
----
-
 ### this の型
 <small>~~正直構文が微妙なので紹介したくない~~</small>
 
@@ -441,7 +404,7 @@ this が不明瞭な場合のみ指定が必要。
 
 基本的に型推論できるため、あまり使わないはず。
 
-<small>`src/try/try11.ts`</small>
+<small>`src/try/try9.ts`</small>
 
 ```ts
 const insertSpace = function (this: string): string {
@@ -457,7 +420,7 @@ console.log(insertSpace.call('test')) // => 't e s t'
 
 任意の型を any として扱うこともできてしまうので注意が必要。
 
-<small>`src/try/try12.ts`</small>
+<small>`src/try/try10.ts`</small>
 
 ```ts
 const anyVar: any = 'text'
@@ -487,7 +450,7 @@ npm で公開されているモジュールはすべて JavaScript で書かれ�
 npm i -D @types/express
 ```
 
-<small>`src/try/try13.ts`</small>
+<small>`src/try/try11.ts`</small>
 
 ```ts
 import express from 'express'
@@ -510,7 +473,7 @@ JavaScript には `typeof` 演算子がある。
 
 型を指定する箇所において使用すると、（JavaScript のように）文字列ではなく型が返ってくる。
 
-<small>`src/try/try14.ts`</small>
+<small>`src/try/try12.ts`</small>
 
 ```ts
 // JavaScript と同じ使い方
@@ -523,6 +486,51 @@ if (typeof str === 'string') {
 type strType = typeof str  // strType は string 型
 const length = (s: strType): number => s.length
 console.log(length(str)) // => 6
+```
+
+---
+
+### Union Types
+「○○型**または**☓☓型」という型。
+珍しい型だが、TypeScript ではよく使われる。
+特に nullable 型はこれを使って表現する。
+
+例えば `number | string` は、「number 型または strging 型」となる。
+
+<small>`src/try/try13.ts`</small>
+
+```ts
+const point = (value: number | string): number => {
+if (typeof value === 'number') {
+  // number 型
+  return value
+}
+// string 型
+return value.length
+}
+
+console.log(point(100))
+console.log(point('100'))
+
+// nullable
+let isNull: boolean | null = true
+isNull = null // エラーにならない
+```
+
+---
+
+### 省略可能なプロパティ
+Union Types と似ているが、こちらは定義しなくてもいいプロパティを表すときのみ使用できる。
+
+<small>`src/try/try14.ts`</small>
+
+```ts
+type Human = {
+  name: string
+  organization?: string
+}
+const mushoku: Human = { name: '無職の男' } // organization プロパティを定義しなくても OK
+console.log(mushoku.name) // => 無職の男
 ```
 
 ---

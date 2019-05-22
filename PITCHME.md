@@ -468,10 +468,9 @@ app.listen(3000)
 JavaScript には `typeof` 演算子がある。
 もちろん TypeScript でも使えるが、特定のタイミングで JavaScript とは違った挙動になる。
 
-
 ---
 
-型を指定する箇所において使用すると、（JavaScript のように）文字列ではなく型が返ってくる。
+型名を書く場所で使用すると、その変数の型が返ってくる。
 
 <small>`src/try/try12.ts`</small>
 

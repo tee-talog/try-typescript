@@ -321,6 +321,7 @@ const fibonacci: number[] = [0, 1, 1, 2, 3, 5]
 const pi: Array<number> = [1, 4, 1, 5, 9, 2] // ジェネリクスを利用（後述）
 
 // オブジェクト型
+// type は型を宣言する構文
 type Human = {
   firstName: string
   lastName: string

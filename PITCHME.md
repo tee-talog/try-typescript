@@ -552,15 +552,29 @@ Java で言うアノテーション。
 
 ---
 
-※サンプルファイルなし
+<small>`src/try/try15.ts`</small>
 
 ```ts
-const Decorate = (f: Function): void => { // 引数にコンストラクタが渡ってくる
-  // プロトタイプの書き換えなど
+//
+const TheDecorator = (arg: string) => {
+  return (target: any, name: string, descriptor: PropertyDescriptor) => {
+    // 元メソッド
+    const method = descriptor.value
+
+    descriptor.value = function () {
+      console.log('decorator ' + arg)
+      // 元のメソッドを呼ぶ
+      return method.apply(this, arguments)
+    }
+  }
 }
 
-@Decorate
-class A {}
+class A {
+  @TheDecorator('hello')
+  nop () {}
+}
+
+new A().nop() // => decorator hello
 ```
 
 ---

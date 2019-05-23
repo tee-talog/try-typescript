@@ -8,7 +8,10 @@
     firstName: string
     lastName: string
   }
-  const tanaka: Human = { firstName: 'Tarou', lastName: 'Tanaka' }
+  const tanaka: Human = {
+    firstName: 'Tarou',
+    lastName: 'Tanaka',
+  }
 
   // 関数型
   type funcType = (a: number, b: number) => number

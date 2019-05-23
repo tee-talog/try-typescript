@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p .",
-    "start": "ts-node"
+    "start": "ts-node",
+    "format": "prettier --config .prettierrc --write ./src/**/*.*s",
+    "fmt": "prettier --config .prettierrc --write ./src/**/*.*s"
   },
   "keywords": [],
   "author": "",

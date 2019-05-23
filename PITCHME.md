@@ -762,8 +762,10 @@ JavaScript に戻したいときでも、コンパイラオプションをしっ
 
 ### 参考
 * TypeScriptの型入門
-    * https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a
+  * https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a
 * 初心者のためのTypeScript入門
-    * https://www.tuyano.com/index2?id=12926003
+  * https://www.tuyano.com/index2?id=12926003
 * TypeScript + Vue.js の始め方
-    * https://blog.asial.co.jp/2019/05/07/TypeScript_%2B_Vue_js_%E3%81%AE%E5%A7%8B%E3%82%81%E6%96%B9
+  * https://blog.asial.co.jp/2019/05/07/TypeScript_%2B_Vue_js_%E3%81%AE%E5%A7%8B%E3%82%81%E6%96%B9
+* TypeScriptのMethod Decoratorを解説する。
+  * https://qiita.com/ukiuni@github/items/8753c762abd7af831afe

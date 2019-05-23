@@ -10,7 +10,7 @@
   }
   const tanaka: Human = {
     firstName: 'Tarou',
-    lastName: 'Tanaka',
+    lastName: 'Tanaka'
   }
 
   // 関数型

@@ -4,7 +4,7 @@
       // 元メソッド
       const method = descriptor.value
 
-      descriptor.value = function () {
+      descriptor.value = function() {
         console.log('decorator ' + arg)
         // 元のメソッドを呼ぶ
         return method.apply(this, arguments)
@@ -14,7 +14,7 @@
 
   class A {
     @TheDecorator('hello')
-    nop () {}
+    nop() {}
   }
 
   new A().nop() // => decorator hello

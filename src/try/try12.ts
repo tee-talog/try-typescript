@@ -6,7 +6,7 @@
   }
 
   // TypeScript 独自の使い方
-  type strType = typeof str  // strType は string 型
+  type strType = typeof str // strType は string 型
   const length = (s: strType): number => s.length
   console.log(length(str)) // => 6
 }

@@ -326,7 +326,10 @@ type Human = {
   firstName: string
   lastName: string
 }
-const tanaka: Human = { firstName: 'Tarou', lastName: 'Tanaka' }
+const tanaka: Human = {
+  firstName: 'Tarou',
+  lastName: 'Tanaka'
+}
 
 // 関数型
 type funcType = (a: number, b: number) => number
@@ -408,7 +411,7 @@ this が不明瞭な場合のみ指定が必要。
 <small>`src/try/try9.ts`</small>
 
 ```ts
-const insertSpace = function (this: string): string {
+const insertSpace = function(this: string): string {
   return this.split('').join(' ')
 }
 console.log(insertSpace.call('test')) // => 't e s t'
@@ -483,7 +486,7 @@ if (typeof str === 'string') {
 }
 
 // TypeScript 独自の使い方
-type strType = typeof str  // strType は string 型
+type strType = typeof str // strType は string 型
 const length = (s: strType): number => s.length
 console.log(length(str)) // => 6
 ```
@@ -555,13 +558,12 @@ Java で言うアノテーション。
 <small>`src/try/try15.ts`</small>
 
 ```ts
-//
 const TheDecorator = (arg: string) => {
   return (target: any, name: string, descriptor: PropertyDescriptor) => {
     // 元メソッド
     const method = descriptor.value
 
-    descriptor.value = function () {
+    descriptor.value = function() {
       console.log('decorator ' + arg)
       // 元のメソッドを呼ぶ
       return method.apply(this, arguments)
@@ -571,7 +573,7 @@ const TheDecorator = (arg: string) => {
 
 class A {
   @TheDecorator('hello')
-  nop () {}
+  nop() {}
 }
 
 new A().nop() // => decorator hello

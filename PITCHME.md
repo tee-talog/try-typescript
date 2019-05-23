@@ -611,8 +611,8 @@ new A().nop() // => decorator hello
 * Q6. 型の絞り込み
 
 <small>物足りない方はこちら！</small>
-<small>https://qiita.com/uhyo/items/e4f54ef3b87afdd65546</small>
-<small>※本スライドに乗ってない文法も使用するので注意。</small>
+<small>https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a</small>
+<small>今回説明した内容以外にもいろいろ書いてある。</small>
 
 ---
 

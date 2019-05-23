@@ -1,4 +1,4 @@
-highlight : monokai
+highlight : Github
 code-line-numbers : true
 transition : slide
 title : "TypeScript 入門"

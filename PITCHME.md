@@ -606,6 +606,7 @@ new A().nop() // => decorator hello
 * Q3. 配列の型の付け方（ジェネリクス）
 * Q4. クラスの作り方
 * Q5. オブジェクトの型付け
+* Q6. 型の絞り込み
 
 <small>物足りない方はこちら！</small>
 <small>https://qiita.com/uhyo/items/e4f54ef3b87afdd65546</small>

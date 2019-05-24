@@ -300,7 +300,7 @@ const hello = 'world' // => 'world' 型
 
 ```ts
 let something: any = 'any'
-somethig = null
+something = null
 something = undefined
 ```
 
